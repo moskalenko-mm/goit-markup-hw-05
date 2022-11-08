@@ -106,6 +106,8 @@ img {
 	align-items: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts .icon {
@@ -139,10 +141,28 @@ img {
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current {
+	position: relative;
+
 	color: var(--accent-color);
+}
+
+.current::after {
+	content: '';
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	width: 100%;
+	height: 4px;
+
+	background-color: var(--accent-color);
+	border-radius: 2px;
 }
 
 .nav-link:hover,
@@ -172,17 +192,16 @@ img {
 	height: 600px;
 	max-width: 1600px;
 	margin: 0 auto;
+	padding-top: 200px;
+	padding-bottom: 200px;
 
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		url(../images/hero-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-
 	background-color: var(--hero-bg-color);
 	text-align: center;
-	padding-top: 200px;
-	padding-bottom: 200px;
 }
 
 .hero-title {
@@ -199,8 +218,7 @@ img {
 }
 
 .hero-button {
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border-radius: 4px;
+
 	padding: 10px 32px;
 	min-width: 216px;
 	border: 0;
@@ -212,13 +230,16 @@ img {
 	line-height: 1.88;
 	text-align: center;
 	letter-spacing: 0.06em;
-
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
 	background-color: var(--accent-color);
 	cursor: pointer;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
+
 	background-color: var(--hero-btn-active-bgc);
 }
 
@@ -362,6 +383,7 @@ img {
 	border-radius: 50%;
 	background-color: var(--primaty-white-color);
 	color: var(--clients-primary-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-item .social-link:hover,
@@ -390,6 +412,7 @@ img {
 	border-radius: 4px;
 	border: 1px solid var(--clients-primary-color);
 	color: var(--clients-primary-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -423,6 +446,7 @@ img {
 	font-style: normal;
 	line-height: 1.71;
 	color: var(--primaty-white-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-mail,
@@ -430,6 +454,7 @@ img {
 	font-style: normal;
 	line-height: 1.71;
 	color: var(--footer-contacts-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-list .item:not(:last-child) {
@@ -460,6 +485,7 @@ img {
 	border-radius: 50%;
 	background-color: var(--footer-social-bg-color);
 	color: var(--primaty-white-color);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .social-link:hover,
@@ -479,8 +505,8 @@ img {
 	line-height: 1.62;
 	text-align: center;
 	color: var(--main-title-color);
-
 	cursor: pointer;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio:hover,
