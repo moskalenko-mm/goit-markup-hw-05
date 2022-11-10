@@ -573,7 +573,8 @@ img {
 		1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item .link:hover .work-overflow {
+.portfolio-item .link:hover .work-overflow,
+.portfolio-item .link:focus .work-overflow {
 	transform: translateY(0);
 }
 
